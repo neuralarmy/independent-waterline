@@ -9,10 +9,10 @@ Waterline is available via NPM.
 $ npm install --save waterline
 
 ## Install necessary sails module without installing entire sails framework
-#Sails-mysql is depreciated. Use sails-sql instead
+#Sails-mysql is depreciated. Use sails-sql instead:
 $ npm install --save sails-mysql
 
-Sails-disk used for development
+Sails-disk used for development:
 $ npm install --save-dev sails-disk
 
 ## Project Folder structure
