@@ -35,5 +35,12 @@ https://www.npmjs.com/package/sails-disk
 Sails-mysql module:
 https://www.npmjs.com/package/sails-mysql
 
+## How to run:
+1. Navigate to the project folder in command line.
+
+2. Type - "node index.js" into command prompt and press enter.
+
+3. You should see a database table "User" populated with some data.
+
 
 
