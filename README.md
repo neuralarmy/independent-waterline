@@ -16,7 +16,7 @@ Sails-disk used for development:
 $ npm install --save-dev sails-disk
 
 ## Project Folder structure
-project.js is the main code file.
+index.js is the main code file.
 package.json is the setup file.
 package-lock.json is created after installation of required modules.
 .tmp folder holds database files.
