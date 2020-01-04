@@ -37,9 +37,11 @@ https://www.npmjs.com/package/sails-mysql
 ## How to run:
 1. Navigate to the project folder in command line.
 
-2. Type - "node index.js" into command prompt and press enter.
+2. Type "npm install" in the folder where package.json is to install dependencies.
 
-3. You should see a database table "User" populated with some data.
+3. Type - "node index.js" into command prompt and press enter.
+
+4. You should see a database table "User" populated with some data.
 
 
 
