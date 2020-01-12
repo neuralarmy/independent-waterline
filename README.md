@@ -1,6 +1,6 @@
-##Necessary Modules
+## Necessary Modules
 
-#Sails-mysql is depreciated. Use sails-sql instead:
+Sails-mysql is depreciated. Use sails-sql instead:
 $ npm install --save sails-mysql
 
 Sails-disk used for development:
@@ -11,8 +11,11 @@ $ npm install sails-mongo
 
 ## Project Folder structure
 index.js is the main code file.
+
 package.json is the setup file.
+
 package-lock.json is created after installation of required modules.
+
 sailsDisk Version.js for sails disk version of code.
 
 ## Code function
