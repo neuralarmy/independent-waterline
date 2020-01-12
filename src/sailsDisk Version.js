@@ -1,7 +1,7 @@
 //Initialize Waterline
 var Waterline = require('waterline');
-//Initialize sails-mongo module for development
-var sailsMongoAdapter = require('sails-mongo');
+//Initialize sails-disk module for development
+var sailsDiskAdapter = require('sails-disk');
 
 // Create the waterline instance.
 var waterline = new Waterline();
@@ -14,10 +14,13 @@ var userCollection = Waterline.Collection.extend({
   autoPK: false,
 
   attributes: {
-    id: { type: 'string', columnName: '_id' },
+    id: {
+        type: 'number',
+        autoMigrations: {autoIncrement: true}
+    },
     firstName: {type:'string'},
     lastName: {type:'string'},
-	  org: {type:'string'},
+	org: {type:'string'},
 
     
   }
@@ -30,13 +33,12 @@ waterline.registerModel(userCollection);
 // Set up the storage configuration for waterline.
 var config = {
   adapters: {
-    'disk': sailsMongoAdapter
+    'disk': sailsDiskAdapter
   },
 
   datastores: {
     default: {
-        adapter: 'disk',
-        url: 'mongodb://root@localhost/foo'
+      adapter: 'disk'
     }
   }
 };
@@ -73,8 +75,8 @@ waterline.initialize(config, (err, ontology)=>{
 	//For deleting entire table
 	//await User.destroy({});
 	// Then we grab all users
-  var users = await User.find()
-  console.log(users);
+    var users = await User.find()
+    console.log(users);
 	//Code to delete already created rows at program end
 	await User.destroy({});
   })()
